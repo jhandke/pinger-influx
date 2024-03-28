@@ -1,7 +1,7 @@
 # Pinger
-Ping Tool to check host availability.
+Ping Tool to check the availability of a specific host.
 
-Ping a host regularly and report results from `ping` command to InfluxDB.
+This program pings a host regularly and reports the results to InfluxDB.
 
 ## Setup
 Build the Docker image and deploy it with the following docker-compose.yaml:
