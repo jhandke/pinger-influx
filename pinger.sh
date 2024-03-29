@@ -19,7 +19,7 @@
 
 echo "INFO: Starting pinger Ping Tool."
 
-output=$(ping -c $PINGER_COUNT -q -n -t $PINGER_TIMEOUT $PINGER_HOST | grep -e "round-trip")
+output=$(ping -c $PINGER_COUNT -q -n $PINGER_HOST | grep -e "round-trip")
 ret=$?
 if [ $ret -ne 0 ]; 
 then
