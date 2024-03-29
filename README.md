@@ -1,16 +1,17 @@
 # Pinger
 Ping Tool to check the availability of a specific host.
 
-This program pings a host regularly and reports the results to InfluxDB.
+This application pings a host regularly and reports the results to InfluxDB.
 
 ## Setup
-Build the Docker image and deploy it with the following docker-compose.yaml:
+Deploy the application with the following docker-compose.yaml:
 
-```
+```YAML
 version: "3"
 services:
   pinger:
-    image: <WHATEVER_YOU_TAGGED_YOUR_IMAGE_WITH>
+    image: ghcr.io/jhandke/pinger-influx:main
+    restart: unless-stopped
     environment:
       - PINGER_HOST=<HOST_TO_PING>
       - PINGER_COUNT=<NUMBER_OF_PINGS>
