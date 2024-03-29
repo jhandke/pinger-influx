@@ -31,6 +31,9 @@ else
     output=${output%*ms}
     IFS=/ read min avg max stddev <<< "$output"
     min=${min//[[:blank:]]/}
+    avg=${avg//[[:blank:]]/}
+    max=${max//[[:blank:]]/}
+    stddev=${stddev//[[:blank:]]/}
 
     echo "INFO: Average ping to" $PINGER_HOST "was:" $avg "ms"
     echo "INFO: Sending values to InfluxDB..."
